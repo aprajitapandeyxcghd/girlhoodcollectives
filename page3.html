@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkParty Podcast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fddde6;
+            text-align: center;
+        }
+
+        /* General Container */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        /* Podcast Box Styling */
+        .box {
+            display: flex;
+            align-items: center;
+            background: #e78aa8;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+            gap: 20px;
+            color: white;
+        }
+
+        .box img {
+            width: 220px;
+            height: auto;
+            border-radius: 10px;
+            transform: rotate(5deg);
+        }
+
+        .text {
+            max-width: 400px;
+        }
+
+        .text h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+        .learn-more, .subscribe-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Wave Styling */
+        .wave-container {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave-container svg {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 180px;
+        }
+
+        .wave {
+            fill: #d46a86;
+        }
+
+        /* Background Color Below the Waves */
+        .bottom-section {
+            background-color: #d46a86;
+            padding: 50px 0;
+        }
+
+    .bottom-section2 {
+      min-height: 60vh;
+      background-color: #fddde6;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      margin-top: -10px;
+    }
+
+    .newsletter h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      margin-top: -1px;
+    }
+
+    .newsletter p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 8px;
+      width: 200px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .newsletter button {
+      padding: 8px 16px;
+      background-color: black;
+      color: white;
+      border: none;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .newsletter small {
+      display: block;
+      margin-top: 3px;
+      font-size: 12px;
+    }
+
+    .social-gallery a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .social-gallery p {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .gallery img {
+      width: 360px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0;
+      background-color: white;
+    }
+
+    .site-footer {
+      font-size: 10px;
+      margin-top: 10px;
+    }
+
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 4px;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .logo {
+        font-size: 40px;
+        top: 60px;
+      }
+
+      .hero h1 {
+        font-size: 18px;
+        margin-top: 300px;
+      }
+
+      .hero p {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+
+      .gallery img {
+        width: 90%;
+      }
+    }
+
+    </style>
+</head>
+<body>
+
+    <!-- Podcast Section -->
+    <div class="container">
+        <div class="box">
+            <div class="text">
+                <h2>The Podcast</h2>
+                <p>Hustle and Healing. Tune in for the ultimate unfiltered podcast hosted by Girlhood Collectives.</p>
+                <!-- <button class="learn-more">Learn More</button> -->
+            </div>
+            <img src="mic.png" alt="Podcast Mic">
+        </div>
+    </div>
+
+    <!-- Wave Divider with Continuous Curves -->
+    <div class="wave-container">
+        <svg viewBox="0 0 1200 300" preserveAspectRatio="none">
+            <path d="M0,200 Q150,100 300,200 T600,200 T900,200 T1200,200 L1200,300 L0,300 Z" class="wave"></path>
+        </svg>
+    </div>
+
+    <!-- Second Section with Matching Background Color -->
+    <div class="bottom-section">
+        <div class="container">
+            <div class="box">
+                <img src="headphones.png" alt="Podcast Image">
+                <div class="text">
+                    <h2>Meetings Could’ve Been Emails</h2>
+                    <p>Welcome to Breaking Barriers, the podcast by Girlhood Collectives where we get real about the highs, lows, and impossible expectations of being a woman at work. From burnout to boardrooms, we chat with trailblazing women who are making moves, breaking rules, and redefining success.</p>
+                    <!-- <button class="subscribe-btn">Subscribe Now</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-section2">
+        <div class="newsletter">
+          <h3>BE THE FIRST TO KNOW</h3>
+          <p>Sign up with your email to receive news and updates.</p>
+          <form>
+            <input type="email" placeholder="EMAIL ADDRESS" />
+            <button type="submit">SIGN UP</button>
+          </form>
+          <small>We respect your privacy.</small>
+        </div>
+    
+        <div class="social-gallery">
+          <a href="https://www.instagram.com/girlhoodcollectives?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+            <p>FOLLOW US ON SOCIAL <strong>@girlhoodcollectives</strong></p>
+          </a>
+          <div class="gallery">
+            <a href="https://aprajitapandeyxcghd.github.io/techandthecitywebsite/">
+              <img src="emma.png" alt="post1">
+            </a>
+            
+            <a href="https://aprajitapandeyxcghd.github.io/techandthecitywebsite/">
+              <img src="cry.png" alt="post2">
+            </a>
+            
+            <a href="https://aprajitapandeyxcghd.github.io/techandthecitywebsite/">
+              <img src="officetears.png" alt="post3">
+            </a>
+            
+    
+          </div>
+        </div>
+    
+        <footer class="site-footer">
+          <p>COPYRIGHT GIRLHOOD COLLECTIVES © 2025 |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms</a>
+          </p>
+        </footer>
+      </div>
+
+</body>
+</html>

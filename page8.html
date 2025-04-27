@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <title>Blog Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fddde6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .category-buttons {
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .category {
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .lifestyle { background-color: #ffb6c1; }
+    .finance   { background-color: #ff69b4; }
+    .wellness  { background-color: #ff1493; }
+    .marketing { background-color: #db7093; }
+    .business  { background-color: #c71585; }
+
+    .search-box {
+      margin: 20px auto;
+      width: 50%;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Featuring Tech and the City</h1>
+
+    <div class="category-buttons">
+      <button class="category lifestyle" onclick="showLifestyle()">Lifestyle</button>
+      <button class="category finance" onclick="showComingSoon()">Finance</button>
+      <button class="category wellness" onclick="showComingSoon()">Wellness</button>
+      <button class="category marketing" onclick="showComingSoon()">Marketing</button>
+      <button class="category business" onclick="showComingSoon()">Business</button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="🔍 Search">
+    </div>
+
+    <div class="grid" id="card-grid">
+      <!-- Cards will be dynamically inserted here -->
+    </div>
+  </div>
+
+  <script>
+    const redirectLink = "https://aprajitapandeyxcghd.github.io/techandthecitywebsite/";
+
+    function createCard(imageSrc, title, description) {
+      return `
+        <a href="${redirectLink}" class="card" target="_blank">
+          ${imageSrc ? `<img src="${imageSrc}" alt="${title}" />` : ''}
+          <div class="card-content">
+            <h3>${title}</h3>
+            <p>${description}</p>
+          </div>
+        </a>
+      `;
+    }
+
+    function showLifestyle() {
+      const grid = document.getElementById('card-grid');
+      grid.innerHTML = `
+        ${createCard('emma.png', 'Emma\'s Journey', 'Exploring new adventures with Emma.')}
+        ${createCard('cry.png', 'Facing Tough Days', 'Because sometimes you just need a good cry.')}
+        ${createCard('officetears.png', 'Office Tears', 'Behind every email, there’s a story of silent office tears.')}
+      `;
+    }
+
+    function showComingSoon() {
+      const grid = document.getElementById('card-grid');
+      grid.innerHTML = `
+        ${createCard('', 'Coming Soon', 'Stay tuned for more amazing content!')}
+      `;
+    }
+
+    // Load Lifestyle by default
+    showLifestyle();
+  </script>
+</body>
+</html>
